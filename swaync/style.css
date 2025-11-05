@@ -1,18 +1,12 @@
-@define-color cc-bg #16161d;
-@define-color noti-bg #11111b;
-@define-color noti-bg-darker #2b2b39;
-@define-color noti-bg-hover #1b1b2b;
-@define-color noti-bg-focus #1b1b1b;
-@define-color noti-close-bg #dcd7ba;
-@define-color noti-close-bg-hover #dcd7ba;
-@define-color text-color #dcd7ba;
-@define-color text-color-disabled #828282;
-@define-color bg-selected #7e9cd8;
-@define-color white-border #FFFFFF;
-@define-color red-base #c34043;
-@define-color red-hover #e46876;
-@define-color green-base #98bb6c;
-@define-color blue-base #7e9cd8;
+@define-color cc-bg #1d2021;
+@define-color noti-bg #282828;
+@define-color noti-bg-darker #282828;
+@define-color text #ebdbb2;
+@define-color text-dis #d5c4a1;
+@define-color white-border #ebdbb2;
+@define-color red-base #cc241d;
+@define-color red-hover #fb4934;
+@define-color green-base #98971a;
 
 * {
   font-family: "JetBrainsMono NFM SemiBold", monospace;
@@ -56,13 +50,13 @@
 
 .notification {
   background: @cc-bg;
-  border: 1px solid @dark-cyan;
+  border: 1px solid @text;
   margin: 3px -2px 3px 0;
 }
 
 .close-button {
   background: @red-base;
-  color: @cc-bg;
+  color: @text;
   text-shadow: none;
   padding: 0;
   margin-top: 5px;
@@ -90,14 +84,14 @@
 
 .notification-default-action:hover,
 .notification-action:hover {
-  color: @blue-base;
+  color: @text;
   background: @cc-bg;
 }
 
 .inline-reply-entry {
   background: @noti-bg-darker;
-  color: @text-color;
-  caret-color: @text-color;
+  color: @text;
+  caret-color: @text;
   border: 1px solid @white-border;
 }
 
@@ -106,17 +100,13 @@
   margin-left: 4px;
   background: @noti-bg;
   border: 1px solid @white-border;
-  color: @text-color;
+  color: @text;
 }
 
 .inline-reply-button:disabled {
   background: transparent;
-  color: @text-color-disabled;
+  color: @text-dis;
   border: 1px solid transparent;
-}
-
-.inline-reply-button:hover {
-  background: @noti-bg-hover;
 }
 
 .summary {
@@ -131,7 +121,7 @@
   font-size: 16px;
   font-weight: 700;
   background: transparent;
-  color: @text-color;
+  color: @text;
   text-shadow: none;
   margin-right: 18px;
 }
@@ -140,7 +130,7 @@
   font-size: 15px;
   font-weight: 400;
   background: transparent;
-  color: @text-color;
+  color: @text;
   text-shadow: none;
 }
 
@@ -150,7 +140,7 @@
 }
 
 .widget-title {
-  color: @blue-base;
+  color: @text;
   background: @noti-bg-darker;
   padding: 5px 10px;
   margin: 10px;
@@ -159,7 +149,7 @@
 
 .widget-title>button {
   font-size: 1rem;
-  color: @text-color;
+  color: @text;
   background: @noti-bg;
   box-shadow: none;
 }
@@ -174,22 +164,21 @@
   padding: 5px 10px;
   margin: 5px 10px;
   font-size: large;
-  color: @blue-base;
+  color: @text;
 }
 
 .widget-dnd>switch {
-  background: @blue-base;
+  background: @cc-bg;
   border-radius: 0;
 }
 
 .widget-dnd>switch:checked {
-  background: @red-base;
-  border: 1px solid @red-base;
+  background: @cc-bg;
 }
 
 .widget-label>label {
   font-size: 1rem;
-  color: @text-color;
+  color: @text;
   margin: 10px;
 }
 
@@ -203,12 +192,12 @@
 .widget-buttons-grid>flowbox>flowboxchild>button {
   margin: 3px;
   background: @cc-bg;
-  color: @text-color;
+  color: @text;
   transition: background-color 0.15s ease-in-out;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: @blue-base;
+  background: @text;
   color: @cc-bg;
 }
 
@@ -220,25 +209,24 @@
 .widget-volume,
 .widget-backlight {
   background: @noti-bg-darker;
-  padding: 5px;
-  margin: 5px 10px;
+  padding: 10px;
+  margin: 5px 5px;
   font-size: 2rem;
-  color: @blue-base;
+  color: @text;
 }
 
 .widget-mpris {
-  color: @text-color;
+  color: @text;
   background: @noti-bg-darker;
-  padding: 5px 10px;
-  margin: 5px 10px 5px 10px;
+  padding: 5px;
+  margin: 10px;
   box-shadow: none;
 }
 
-.widget-mpris>box>button,
-.widget-mpris-player,
-.widget-mpris-album-art {
+.widget-mpris-player {
+  background: @noti-bg;
   border-radius: 0;
   box-shadow: none;
-  padding: 5px 10px;
-  margin: 10px 0 0 0;
+  padding: 5px 5px;
+  margin: 0px;
 }

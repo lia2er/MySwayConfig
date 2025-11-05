@@ -5,25 +5,26 @@
   "control-center-margin-top": 10,
   "control-center-margin-bottom": 10,
   "control-center-margin-right": 10,
-  "notification-icon-size": 64,
-  "notification-body-image-height": 100,
-  "notification-body-image-width": 200,
-  "timeout": 10,
+  "notification-icon-size": 32,
+  "notification-body-image-height": 64,
+  "notification-body-image-width": 128,
+  "timeout": 5,
   "timeout-low": 5,
   "timeout-critical": 0,
   "fit-to-screen": false,
-  "control-center-width": 400,
-  "control-center-height": 1033,
-  "notification-window-width": 400,
+  "control-center-width": 350,
+  "control-center-height": 1050,
+  "notification-window-width": 350,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
-  "transition-time": 100,
+  "transition-time": 50,
   "hide-on-clear": false,
   "hide-on-action": false,
   "script-fail-notify": true,
-  "text-empty": "Nothing here",
+  "text-empty": "Waitin",
   "widgets": [
     "buttons-grid",
+    "dnd",
     "mpris"
   ],
   "widget-config": {
@@ -40,10 +41,11 @@
       "text": "Notification Center"
     },
     "mpris": {
-      "image-size": 100,
+      "image-size": 32,
       "image-radius": 0,
       "blacklist": [
-        "kew"
+        "kew",
+        "playerctl"
       ]
     },
     "volume": {
@@ -60,11 +62,11 @@
         },
         {
           "label": "󰜉",
-          "command": "systemctl reboot"
+          "command": "systemctl kexec"
         },
         {
           "label": "󰌾",
-          "command": "hyprlock"
+          "command": "swaylock -L -e -u -f -i /home/kelt/Pictures/Wallpapers/not_loaded.png"
         },
         {
           "label": "󰆴",

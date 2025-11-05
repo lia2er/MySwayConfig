@@ -1,11 +1,10 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
+    /* `font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
 }
 
 window#waybar {
-    box-shadow: inset 0 -2px #1d2021;
     color: #ebdbb2;
     transition-property: background-color;
     transition-duration: .2s;
@@ -15,24 +14,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    box-shadow: inset 0 -2px transparent;
-}
-window#waybar.solo {
-    box-shadow: inset 0 -2px #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    box-shadow: inset 0 -2px #3F3F3F;
-}
-
-window#waybar.chromium {
-    box-shadow: inset 0 -2px #ebdbb2;
-    border: none;
-}
-
 button {
     box-shadow: inset 0 -2px transparent;
     border: none;
@@ -40,8 +21,7 @@ button {
 }
 
 button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ebdbb2;
+    box-shadow: inset 0 -2px #ebdbb2;
 }
 
 #pulseaudio:hover {
@@ -55,7 +35,7 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: #a89984;
+    background: #3c3836;
 }
 
 #workspaces button.focused {
@@ -109,7 +89,7 @@ button:hover {
 }
 
 #clock {
-    box-shadow: inset 0 -2px #64727D;
+    box-shadow: inset 0 -2px #b16286;
 }
 
 #battery {
@@ -119,7 +99,7 @@ button:hover {
 
 #battery.charging, #battery.plugged {
     color: #ebdbb2;
-    box-shadow: inset 0 -2px #26A65B;
+    box-shadow: inset 0 -2px #98971a;
 }
 
 @keyframes blink {
@@ -129,12 +109,11 @@ button:hover {
     }
 }
 
-/* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    box-shadow: inset 0 -2px #f53c3c;
+    box-shadow: inset 0 -2px #cc241d;
     color: #ebdbb2;
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -145,17 +124,17 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    box-shadow: inset 0 -2px #f53c3c;
+    box-shadow: inset 0 -2px #cc241d;
     color: #ebdbb2;
 }
 
 #power-profiles-daemon.balanced {
-    box-shadow: inset 0 -2px #2980b9;
+    box-shadow: inset 0 -2px #458588;
     color: #ebdbb2;
 }
 
 #power-profiles-daemon.power-saver {
-    box-shadow: inset 0 -2px #2ecc71;
+    box-shadow: inset 0 -2px #98971a;
     color: #ebdbb2;
 }
 
@@ -164,7 +143,7 @@ label:focus {
 }
 
 #cpu {
-    box-shadow: inset 0 -2px #2ecc71;
+    box-shadow: inset 0 -2px #98971a;
     color: #ebdbb2;
 }
 
@@ -172,16 +151,12 @@ label:focus {
     box-shadow: inset 0 -2px #9b59b6;
 }
 
-#disk {
-    box-shadow: inset 0 -2px #964B00;
-}
-
 #backlight {
-    box-shadow: inset 0 -2px #90b1b1;
+    box-shadow: inset 0 -2px #ebdbb2;
 }
 
 #network {
-    box-shadow: inset 0 -2px #2980b9;
+    box-shadow: inset 0 -2px #458588;
 }
 
 #network.disconnected {
@@ -189,13 +164,13 @@ label:focus {
 }
 
 #pulseaudio {
-    box-shadow: inset 0 -2px #f1c40f;
+    box-shadow: inset 0 -2px #d79921;
     color: #ebdbb2;
 }
 
 #pulseaudio.muted {
-    box-shadow: inset 0 -2px #90b1b1;
-    color: #2a5c45;
+    box-shadow: inset 0 -2px #fabd2f;
+    color: #ebdbb2;
 }
 
 #wireplumber {
@@ -222,15 +197,15 @@ label:focus {
 }
 
 #temperature {
-    box-shadow: inset 0 -2px #f0932b;
+    box-shadow: inset 0 -2px #98971a;
 }
 
 #temperature.critical {
-    box-shadow: inset 0 -2px #eb4d4b;
+    box-shadow: inset 0 -2px #cc241d;
 }
 
 #tray {
-    box-shadow: inset 0 -2px #2980b9;
+    box-shadow: inset 0 -2px #458588;
 }
 
 #tray > .passive {
@@ -239,7 +214,7 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    box-shadow: inset 0 -2px #eb4d4b;
+    box-shadow: inset 0 -2px #83a598;
 }
 
 #idle_inhibitor {
@@ -269,10 +244,10 @@ label:focus {
 }
 
 #language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
+    box-shadow: inset 0 -2px #689d6a;
+    color: #ebdbb2;
+    padding: 0 2px;
+    margin: 0 2px;
     min-width: 16px;
 }
 
@@ -293,11 +268,11 @@ label:focus {
 }
 
 #scratchpad {
-    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -2px #ebdbb2;
 }
 
 #scratchpad.empty {
-	box-shadow: inset 0 -2px transparent;
+    box-shadow: inset 0 -2px transparent;
 }
 
 #privacy {
